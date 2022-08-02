@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Taskinator</title>
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+    />
+  </head>
+  <body class="container">
+    
+    <div class="game_container col s12 m8 offset-m8">
+      <header>
+        <h1 class="page-title">CodeQuiz</h1>
+        <button class="start_btn btn" onclick="setGameState('game_state','started')">Start Game</button>
+        <input type="radio" name="sample" value="sing">
+      </header>
+  
+      <div class="question_runner hide">
+
+        <div class="question_text_time dcontainer">
+          <div class="question_text col s6 m8">
+          </div>
+          <div class="col s6 m8">
+            Total time remaining <span class="totalTimeRemaining"></span>seconds <br>
+            Remaining <span class="questionTimeRemainingText"></span> seconds
+          </div>
+        </div>
+  
+        <div class="question_options dcontainer s12 m12">
+
+        </div>
+
+        <p>Click the button below to submit answer!</p>
+        <button class="btn disabled question_control_btns submit_answer_btn" onclick="submitAnswer()">Submit</button>
+        <button class="btn disabled question_control_btns show_next_btn" onclick="nextQuestion()">Next Question</button>
+      </div>
+  
+      <div class="game_ended hide">
+        <p>Name: <span class="quizTakerName" contenteditable="true">Enter your name</span></p>
+        <div class="game_stats">
+          <table>
+            <thead>
+              <tr>
+                <th>Total questions</th>
+                <th>Answered Correct</th>
+                <th>Answered Wrong</th>
+              </tr>
+            </thead>
+  
+            <tbody>
+              <tr>
+                <td class="game_stats total_questions">10</td>
+                <td class="game_stats correct_questions">8</td>
+                <td class="game_stats wrong_questions">2</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+  
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
